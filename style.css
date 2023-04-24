@@ -32,7 +32,7 @@ canvas {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: #000000;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -47,11 +47,11 @@ canvas {
 }
 
 .tab:hover {
-  background-color: #bbb;
+  background-color: #00aeff;
 }
 
 .tab.active {
-  background-color: #ccc;
+  background-color: #ffd900;
 }
 
 .tab-content {
@@ -61,3 +61,17 @@ canvas {
   margin-top: -1px;
 }
 
+.logo-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 100%;
+}

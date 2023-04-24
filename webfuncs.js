@@ -336,3 +336,18 @@ canvas.onpointerout = e => {
   touching = false
   touches.clear()
 }
+
+const tabs = document.querySelectorAll('.tab')
+const tabContents = document.querySelectorAll('.tab-content')
+console.log(tabs)
+console.log(tabContents)
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+	console.log('Tab ', index, 'clicked!');
+    tabs.forEach(t => t.classList.remove('active'))
+    tab.classList.add('active')
+    tabContents.forEach(c => c.classList.remove('active'))
+    tabContents[index].classList.add('active')
+  })
+})

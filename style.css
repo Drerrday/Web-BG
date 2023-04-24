@@ -22,3 +22,42 @@ canvas {
   height: auto;
   object-fit: contain;
 }
+
+.tab-content:first-of-type {
+  display: block;
+}
+
+.tab-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 5px 5px 0 0;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #bbb;
+}
+
+.tab.active {
+  background-color: #ccc;
+}
+
+.tab-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 5px 5px 5px;
+  margin-top: -1px;
+}
+

@@ -349,5 +349,6 @@ tabs.forEach((tab, index) => {
     tab.classList.add('active')
     tabContents.forEach(c => c.classList.remove('active'))
     tabContents[index].classList.add('active')
+	tabContents[index].style.display = 'block'
   })
 })

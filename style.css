@@ -18,8 +18,12 @@ html, body {
 }
 
 canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -28,9 +32,13 @@ canvas {
 }
 
 .tab-container {
+  position: relative;
+  left: 0;
+  z-index: 2;
   display: flex;
+  gap:1rem;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #000000;
   border-radius: 5px;
@@ -44,6 +52,8 @@ canvas {
   border-radius: 5px 5px 0 0;
   margin: 5px;
   transition: background-color 0.3s ease;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .tab:hover {
@@ -65,7 +75,7 @@ canvas {
   width: 100px;
   height: 100px;
   display: flex;
-  justify-content: right;
+  justify-content: left;
   align-items: center;
   margin: 0 auto;
   border: 1px solid black;
@@ -74,4 +84,33 @@ canvas {
 .logo {
   max-width: 100%;
   max-height: 100%;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
 }
